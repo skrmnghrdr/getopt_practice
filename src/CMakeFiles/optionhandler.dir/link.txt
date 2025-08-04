@@ -1,0 +1,1 @@
+/usr/bin/cc -g -rdynamic CMakeFiles/optionhandler.dir/main.o CMakeFiles/optionhandler.dir/option_handler.o -o optionhandler  -lm 

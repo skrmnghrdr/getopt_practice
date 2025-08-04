@@ -1,0 +1,3 @@
+/mnt/c/Users/skrm/Desktop/17Lifestory/Tool Developer/option_handler/src/CMakeFiles/optionhandler.dir
+/mnt/c/Users/skrm/Desktop/17Lifestory/Tool Developer/option_handler/src/CMakeFiles/edit_cache.dir
+/mnt/c/Users/skrm/Desktop/17Lifestory/Tool Developer/option_handler/src/CMakeFiles/rebuild_cache.dir
