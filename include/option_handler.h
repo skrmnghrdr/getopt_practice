@@ -10,7 +10,7 @@
 #include <stdint.h> // for int32_t
 #include <stddef.h> // for size_t
 
-#define MAX_PATH_LENGTH 5 //repalce back to 256
+#define MAX_PATH_LENGTH 255 //repalce back to 256
 #define OPT_HANDLER_ERR 1
 #define ON_FLAG 1
 #define EXIT_FAIL -1

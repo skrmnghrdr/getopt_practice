@@ -206,11 +206,12 @@ int process_options(int argc, char ** argv, options_t * options_p)
         {"file",  required_argument, NULL, 'f'},        
         {"verbose", no_argument,    NULL, 'v'},
         {"debug",   no_argument,    NULL, 'd'},
+        {"testmode", no_argument,   NULL, 't'},
         {NULL, 0, NULL, 0}
     };
     //now we plug it into a loop to process the data
     //opterror = 0;? nah/ probably a bad idea
-    while ((option = getopt_long(argc, argv, "hf:o:vd", long_options, NULL)) != -1){
+    while ((option = getopt_long(argc, argv, "hf:o:vdt", long_options, NULL)) != -1){
         switch (option)
         {
         case 'v':
@@ -228,6 +229,8 @@ int process_options(int argc, char ** argv, options_t * options_p)
             break;
         case 'd':
             exit_code = process_d_option(options_p);
+        case 't':
+            printf("Test mode coming soon\n");
             break;
         case '?':
             report_invalid_options(optopt);
@@ -288,6 +291,7 @@ static void print_help_menu()
             "Options:\n"
             "\t-h, --help\t\t\t Show this help message and exit\n"
             "\t-o, --output\t\t\t File path for the output file\n"
+            "\t-f, --file\t\t\t File path for the input file\n"
             "\t-v, --verbose\t\t\t Verbose mode on. (Start yapping)\n"
             "\t-d, --debug\t\t\t Debug mode on\n"
             "\t-t, --testmode\t\t\t Experimental function\n"
@@ -309,7 +313,7 @@ int print_struct(options_t * options_p)
      * 
      */
     printf("Printing the contents of the struct\n...");
-    printf("%d\n%s\n%d\n%s\n%d\n%d\n%d",
+    printf("f_flag:%d\nf_value:%s\no_flag:%d\no_value%s\nv_flag%d\nd_flag%d\nh_flag%d\n",
         options_p->f_flag, options_p->f_value,
         options_p->o_flag, options_p->o_value,
         options_p->v_flag, options_p->d_flag,
